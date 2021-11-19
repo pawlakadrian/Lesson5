@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.annotation.ElementType;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -26,7 +28,7 @@ public class Main {
                     getMoviesBetweenDates(reader, moviesLibrary);
                     break;
                 case 2:
-                    getRandomMovie();
+                    getRandomMovie(moviesLibrary);
                     break;
                 case 3:
                     getMoviesWithActorPlayed();
@@ -62,9 +64,10 @@ public class Main {
         }
     }
 
-    public static void getRandomMovie() {
-        System.out.println("Random movie");
-        System.out.println();
+    public static void getRandomMovie(MovieLibrary movieLibrary) {
+        Random randomGenerator = new Random();
+        int index = randomGenerator.nextInt(movieLibrary.getMovies().size());
+        System.out.println(movieLibrary.getMovies().get(index).getAllInformation());
     }
 
     public static void getMoviesWithActorPlayed() {
