@@ -9,4 +9,9 @@ public class Actor {
     public String getlastName() {
         return lastName;
     }
+
+    @Override
+    public String toString() {
+        return firstName + lastName;
+    }
 }

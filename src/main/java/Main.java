@@ -1,15 +1,20 @@
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 //-------------------------
-        FileHandling fileHandling = new FileHandling();
-        System.out.println(fileHandling.fileHandling());
-//-------------------------
+        File file = new File("src/main/java/resources/movies.json");
+
+        ObjectMapper mapper = new ObjectMapper();
+        MovieLibrary moviesLibrary = mapper.readValue(file, MovieLibrary.class);
 
 //-------------------------
         int chosenMenu;
@@ -18,10 +23,13 @@ public class Main {
             chosenMenu = Integer.parseInt(reader.readLine());
             switch (chosenMenu) {
                 case 1:
+                    getMoviesBetweenDates(reader, moviesLibrary);
                     break;
                 case 2:
+                    getRandomMovie();
                     break;
                 case 3:
+                    getMoviesWithActorPlayed();
                     break;
                 case 4:
                     System.out.println("Close the program");
@@ -31,5 +39,36 @@ public class Main {
             }
         }
         while (chosenMenu < 4);
+    }
+
+    public static void getMoviesBetweenDates(BufferedReader reader, MovieLibrary movieLibrary) throws IOException {
+        System.out.println("Please enter the first date: ");
+        int firstDate = Integer.parseInt(reader.readLine());
+        System.out.println("Please enter the second date: ");
+        int secondDate = Integer.parseInt(reader.readLine());
+
+        searchMoviesBetweenDates(firstDate, secondDate, movieLibrary);
+    }
+
+    public static void searchMoviesBetweenDates(int firstDate, int secondDate, MovieLibrary movieLibrary) {
+        if (firstDate <= secondDate) {
+            movieLibrary.getMovies()
+                    .stream()
+                    .filter(m -> m.getDate() >= firstDate)
+                    .filter(m -> m.getDate() <= secondDate)
+                    .forEach(m -> System.out.println(m.getAllInformation()));
+        } else {
+            System.out.println("Please provide valid dates");
+        }
+    }
+
+    public static void getRandomMovie() {
+        System.out.println("Random movie");
+        System.out.println();
+    }
+
+    public static void getMoviesWithActorPlayed() {
+        System.out.println("movies with actor");
+        System.out.println();
     }
 }

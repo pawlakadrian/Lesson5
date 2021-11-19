@@ -9,4 +9,10 @@ public class Director {
     public String getlastName() {
         return lastName;
     }
+
+    @Override
+    public String toString() {
+        return "director: " + firstName +" " + lastName;
+    }
 }
+

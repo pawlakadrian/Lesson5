@@ -1,5 +1,5 @@
 {
-  "movies":[
+  "moviesLibrary":[
     {
       "title":"The Shawshank Redemption",
       "director":{
@@ -43,6 +43,167 @@
         {
           "firstName":"Gwyneth",
           "lastName":"Paltrow"
+        }
+      ]
+    },
+    {
+      "title":"Tremors",
+      "director":{
+        "firstName":"Ron",
+        "lastName":"Underwood"
+      },
+      "genre":"HORROR",
+      "date":"1990",
+      "actors":[
+        {
+          "firstName":"Kevin",
+          "lastName":"Bacon"
+        },
+        {
+          "firstName":"Fred",
+          "lastName":"Ward"
+        },
+        {
+          "firstName":"Finn",
+          "lastName":"Carter"
+        }
+      ]
+    },
+    {
+      "title":"Wrong turn",
+      "director":{
+        "firstName":"Rob",
+        "lastName":"Schmidt"
+      },
+      "genre":"HORROR",
+      "date":"2003",
+      "actors":[
+        {
+          "firstName":"Desmond",
+          "lastName":"Harrington"
+        },
+        {
+          "firstName":"Eliza",
+          "lastName":"Dushku"
+        },
+        {
+          "firstName":"Emmanuelle",
+          "lastName":"Chriqui"
+        }
+      ]
+    },
+    {
+      "title":"The Hills Have Eyes",
+      "director":{
+        "firstName":"Alexandre",
+        "lastName":"Aja"
+      },
+      "genre":"HORROR",
+      "date":"2006",
+      "actors":[
+        {
+          "firstName":"Aaron",
+          "lastName":"Stanford"
+        },
+        {
+          "firstName":"Ted",
+          "lastName":"Levine"
+        },
+        {
+          "firstName":"Kathleen",
+          "lastName":"Quinlan"
+        }
+      ]
+    },
+    {
+      "title":"ALI G",
+      "director":{
+        "firstName":"Mark",
+        "lastName":"Mylod"
+      },
+      "genre":"Comedy",
+      "date":"2002",
+      "actors":[
+        {
+          "firstName":"Sacha",
+          "lastName":"Cohen"
+        },
+        {
+          "firstName":"Michael",
+          "lastName":"Gambon"
+        },
+        {
+          "firstName":"Charles",
+          "lastName":"Dance"
+        }
+      ]
+    },
+    {
+      "title":"Joker",
+      "director":{
+        "firstName":"Todd",
+        "lastName":"Phillips"
+      },
+      "genre":"Drama",
+      "date":"2019",
+      "actors":[
+        {
+          "firstName":"Joaquin",
+          "lastName":"Phoenix"
+        },
+        {
+          "firstName":"Robert",
+          "lastName":"De Niro"
+        },
+        {
+          "firstName":"Zazie",
+          "lastName":"Beetz"
+        }
+      ]
+    },
+    {
+      "title":"The Irishman",
+      "director":{
+        "firstName":"Martin",
+        "lastName":"Scorsese"
+      },
+      "genre":"Crime",
+      "date":"2019",
+      "actors":[
+        {
+          "firstName":"Al",
+          "lastName":"Pacino"
+        },
+        {
+          "firstName":"Robert",
+          "lastName":"De Niro"
+        },
+        {
+          "firstName":"Joe",
+          "lastName":"Pesci"
+        }
+      ]
+    },
+    {
+      "title":"The Intern",
+      "director":{
+        "firstName":"Nancy",
+        "lastName":"Meyers"
+      },
+      "genre":"Comedy",
+      "date":"2015",
+      "actors":[
+        {
+          "firstName":"Robert",
+          "lastName":"De Niro"
+        },
+        {
+          "firstName":"Anne",
+          "lastName":"Hathaway"
+        },
+        {
+          "firstName":"Rene",
+          "lastName":"Russo"
         }
       ]
     }
