@@ -1,4 +1,12 @@
 public class Actor {
-    private String FirstName;
-    private String LastName;
+    private String firstName;
+    private String lastName;
+
+    public String getfirstName() {
+        return firstName;
+    }
+
+    public String getlastName() {
+        return lastName;
+    }
 }

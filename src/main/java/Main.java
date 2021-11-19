@@ -6,6 +6,12 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+//-------------------------
+        FileHandling fileHandling = new FileHandling();
+        System.out.println(fileHandling.fileHandling());
+//-------------------------
+
+//-------------------------
         int chosenMenu;
         do {
             Menu.displayMenu();

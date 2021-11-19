@@ -1,11 +1,29 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Movie {
-    private String name;
     private String title;
-    private int releaseDate;
-    private String Director;
+    private int date;
+    private Director director;
     private String genre;
-    private List<Actor> actorsList = new ArrayList<>();
+    private List<Actor> actors;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getDate() {
+        return date;
+    }
+
+    public Director getDirector() {
+        return director;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public List<Actor> getActors() {
+        return actors;
+    }
 }
