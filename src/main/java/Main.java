@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.annotation.ElementType;
 import java.util.Random;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -31,7 +33,7 @@ public class Main {
                     getRandomMovie(moviesLibrary);
                     break;
                 case 3:
-                    getMoviesWithActorPlayed();
+                    getMoviesWithActorPlayed(reader, moviesLibrary);
                     break;
                 case 4:
                     System.out.println("Close the program");
@@ -70,8 +72,18 @@ public class Main {
         System.out.println(movieLibrary.getMovies().get(index).getAllInformation());
     }
 
-    public static void getMoviesWithActorPlayed() {
-        System.out.println("movies with actor");
+    public static void getMoviesWithActorPlayed(BufferedReader reader, MovieLibrary movieLibrary) throws IOException {
+        System.out.println("Please enter actor first name and last name: ");
+        String actorName = reader.readLine();
+        System.out.println("Actor " + actorName + " played in following movies: ");
+
+        for (Movie movie : movieLibrary.getMovies()) {
+            movie.getActors()
+                    .stream()
+                    .filter(m -> m.toString().equals(actorName))
+                    .forEach(m -> System.out.println(movie.getTitle()));
+        }
+
         System.out.println();
     }
 }

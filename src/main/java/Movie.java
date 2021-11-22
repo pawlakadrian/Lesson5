@@ -8,7 +8,7 @@ public class Movie {
     private List<Actor> actors;
 
     public String getTitle() {
-        return "title: " + title;
+        return title;
     }
 
     public int getDate() {
@@ -28,7 +28,7 @@ public class Movie {
     }
 
     public String getAllInformation() {
-        return getTitle() + System.lineSeparator()
+        return "title: " + getTitle() + System.lineSeparator()
                 + getDirector() + System.lineSeparator()
                 + getGenre() + System.lineSeparator()
                 + "date: " + getDate() + System.lineSeparator()
